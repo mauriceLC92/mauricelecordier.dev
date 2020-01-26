@@ -5,7 +5,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className='App-header'>
-        <h1>Welcome to my slice of the web</h1>
+        <h1>Welcome to my slice of the Web</h1>
         <p>
           Page under construction...
           <span role='img' aria-label="hammer">🛠️</span>
