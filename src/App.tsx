@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import githubLink from './GitHub-Mark-Light-32px.png';
-
+// Todo - Swap out the github image link for a proper icon
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -9,7 +9,7 @@ const App: React.FC = () => {
         <h1>Maurice Le Cordier</h1>
         <h3>Welcome to my slice of the Web</h3>
         <a href={'https://github.com/mauriceLC92'}>
-        <img src={githubLink} alt="github link"  />
+          <img src={githubLink} alt="github link" />
         </a>
       </header>
     </div>
