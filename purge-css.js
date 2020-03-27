@@ -2,6 +2,13 @@ const { PurgeCSS } = require("purgecss");
 const fs = require('fs');
 // https://github.com/FullHuman/purgecss/issues/43
 // https://gist.github.com/martsie/a25dd8a8c57547004548013f07b50a44
+
+/**
+ * useful tailwind and react links
+ * https://wetainment.com/create-react-app-tailwind-css/
+ * https://wetainment.com/create-react-app-tailwind-css/
+ * https://github.com/kriswep/cra-tailwindcss
+ */
 async function runTheThing() {
 
   const result = await new PurgeCSS().purge({
