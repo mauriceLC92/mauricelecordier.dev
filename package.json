@@ -19,8 +19,8 @@
     "prestart": "tailwind build ./src/index.tailwind.css -c ./tailwind.config.js -o ./src/index.css",
     "start": "react-scripts start",
     "prebuild": "tailwind build ./src/index.tailwind.css -c ./tailwind.config.js -o ./src/index.css",
-    "build": "react-scripts build",
-    "postbuild": "purgecss --css build/static/css/*.css --content build/static/index.html build/static/js/*.js --out build/static/css",
+    "build": "react-scripts build && npm run purge-css",
+    "purge-css": "node ./purge-css", 
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

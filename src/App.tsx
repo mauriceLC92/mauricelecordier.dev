@@ -2,6 +2,8 @@ import React from 'react';
 // @ts-ignore
 import githubLink from './GitHub-Mark-Light-32px.png';
 // Todo - Swap out the github image link for a proper icon
+// "postbuild": "purgecss --css build/static/css/*.css --content build/static/index.html build/static/js/*.js --out build/static/css",
+// see the puregeCSS guides from the repo under react
 const App: React.FC = () => {
   return (
     <div className="bg-gray-900 w-screen h-screen flex flex-col items-center justify-center">
