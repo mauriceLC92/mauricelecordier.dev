@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <nav className='flex'>
         <p className='nav-item'>about |</p>
         <p className='nav-item'>notes |</p>
-        <p className='nav-item'>projects |</p>
+        <p className='nav-item'>projects</p>
       </nav>
     </div>
   );
