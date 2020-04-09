@@ -2,8 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-// "postbuild": "purgecss --css build/static/css/*.css --content build/static/index.html build/static/js/*.js --out build/static/css",
-// see the puregeCSS guides from the repo under react
+/**
+ * todo 
+ * - Need to add react router
+ */
 const App: React.FC = () => {
   return (
     <div className="bg-gray-900 w-screen h-screen flex flex-col items-center justify-center">
