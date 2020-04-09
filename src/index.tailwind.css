@@ -2,5 +2,8 @@
 
 @tailwind components;
 
-@tailwind utilities;
+.nav-item {
+  @apply text-gray-400 text-lg mr-2 cursor-pointer;
+}
 
+@tailwind utilities;

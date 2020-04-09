@@ -619,6 +619,13 @@ video {
   }
 }
 
+.nav-item {
+  color: #cbd5e0;
+  font-size: 1.125rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -63451,4 +63458,3 @@ video {
     transition-duration: 1000ms;
   }
 }
-
