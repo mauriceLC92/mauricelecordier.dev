@@ -9,6 +9,15 @@ const fs = require('fs');
  * https://wetainment.com/create-react-app-tailwind-css/
  * https://github.com/kriswep/cra-tailwindcss
  */
+
+ /**
+  * Useful tailwind components
+  * https://tailwindtemplates.io/
+  * https://www.creative-tim.com/learning-lab/tailwind-starter-kit/#/presentation
+  * https://tailwindcomponents.com/
+  * https://dev.to/brendanrc2/how-we-use-tailwind-in-components-f77   Good article on how to use in React for components - But use the classNames lib instead
+  * https://github.com/aniftyco/awesome-tailwindcss
+  */
 async function runTheThing() {
 
   const result = await new PurgeCSS().purge({
