@@ -14,12 +14,12 @@ const App: React.FC = () => {
       <a href={'https://github.com/mauriceLC92'}>
         <FontAwesomeIcon icon={faGithub} color='white' size='4x' />
       </a>
-      <br />
+      {/* <br />
       <nav className='flex'>
         <p className='nav-item'>about |</p>
         <p className='nav-item'>notes |</p>
         <p className='nav-item'>projects</p>
-      </nav>
+      </nav> */}
     </div>
   );
 }
