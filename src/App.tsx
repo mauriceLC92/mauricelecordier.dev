@@ -1,12 +1,24 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import {
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { TypeScriptPage } from './components/TypeScriptPage';
 
-/**
- * todo 
- * - Need to add react router
- */
+
 const App: React.FC = () => {
+  return (
+    <Switch>
+      <Route path='/' component={Home} exact/>
+      <Route path='/typescript-notes' component={TypeScriptPage} />
+    </Switch>
+  );
+}
+
+const Home: React.SFC = () => {
   return (
     <div className="bg-gray-900 w-screen h-screen flex flex-col items-center justify-center">
       <p className='text-6xl text-gray-200 text-center hover:text-white'>Maurice Le Cordier</p>
@@ -14,14 +26,17 @@ const App: React.FC = () => {
       <a href={'https://github.com/mauriceLC92'}>
         <FontAwesomeIcon icon={faGithub} color='white' size='4x' />
       </a>
-      {/* <br />
-      <nav className='flex'>
-        <p className='nav-item'>about |</p>
-        <p className='nav-item'>notes |</p>
-        <p className='nav-item'>projects</p>
-      </nav> */}
+      <br />
+      <br />
+        <nav>
+          <ul className='flex'>
+            <li className='nav-item'>
+              <Link to="/typescript-notes">typeScript notes</Link>
+            </li>
+          </ul>
+        </nav>
     </div>
-  );
+  )
 }
 
 export default App;
