@@ -11,7 +11,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   ],
 
   // Include any special characters you're using in this regular expression
-  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+  defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || []
 })
 
 module.exports = {
@@ -19,9 +19,9 @@ module.exports = {
     require('postcss-import'),
     require('tailwindcss'),
     require('autoprefixer'),
-    purgecss
-    // ...process.env.NODE_ENV === 'production'
-    //   ? purgecss
-    //   : []
+    // purgecss
+    ...process.env.NODE_ENV === 'production'
+      ? purgecss
+      : []
   ]
 }
