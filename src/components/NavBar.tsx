@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 export const NavBar: React.SFC = () => {
   const [isOpen, setIsOpen] = useState(false)
   return <nav className="bg-gray-900">
-    <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
       <div className="relative flex items-center justify-between h-16">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
 
@@ -23,10 +23,12 @@ export const NavBar: React.SFC = () => {
         <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <div className="hidden sm:block sm:ml-6">
             <div className="flex">
-              <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Home</Link>
-              <a href="https://www.google.com" className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Team</a>
-              <a href="https://www.google.com" className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Projects</a>
-              <a href="https://www.google.com" className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Calendar</a>
+              <NavBarHomeButton>
+                Home
+              </NavBarHomeButton>
+                <NavBarItemButton>
+                  TypeScript
+                </NavBarItemButton>
             </div>
           </div>
         </div>
@@ -40,9 +42,9 @@ export const NavBar: React.SFC = () => {
           <div className="ml-3 relative">
             <div>
               <button className="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
-              <a href={'https://github.com/mauriceLC92'}>
-            <FontAwesomeIcon icon={faGithub} color='white' size='2x' />
-          </a>
+                <a href={'https://github.com/mauriceLC92'}>
+                  <FontAwesomeIcon icon={faGithub} color='white' size='2x' />
+                </a>
               </button>
             </div>
           </div>
@@ -53,11 +55,37 @@ export const NavBar: React.SFC = () => {
 
     <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`}>
       <div className="px-2 pt-2 pb-3">
-        <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Home</Link>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Team</a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Projects</a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Calendar</a>
+        <NavBarHomeButton>Home</NavBarHomeButton>
+        <NavBarItemButtonMobile>TypeScript</NavBarItemButtonMobile>
       </div>
     </div>
   </nav>
 }
+
+
+interface NavbarItem {
+  children: React.ReactNode;
+}
+const NavBarHomeButton: React.SFC<NavbarItem> = ({ children }) => {
+  return <>
+    <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+      {children}
+    </Link>
+  </>
+}
+
+const NavBarItemButton: React.SFC<NavbarItem> = ({ children }) => {
+  return <>
+    <Link to={`${children?.toString().toLocaleLowerCase()}`} className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+      {children}
+    </Link>
+  </>
+}
+const NavBarItemButtonMobile: React.SFC<NavbarItem> = ({ children }) => {
+  return <>
+    <Link to={`${children?.toString().toLocaleLowerCase()}`} className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+      {children}
+    </Link>
+  </>
+}
+
