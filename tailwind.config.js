@@ -10,7 +10,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/ui'),
     require('postcss-import'),
     plugin(function({ addUtilities, addComponents, e, prefix, config }) {
       // Add your custom styles here
