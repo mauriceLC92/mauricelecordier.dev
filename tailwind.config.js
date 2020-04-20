@@ -1,10 +1,14 @@
 const plugin = require('tailwindcss/plugin')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
-  variants: {},
   plugins: [
     require('postcss-import'),
     plugin(function({ addUtilities, addComponents, e, prefix, config }) {
