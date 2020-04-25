@@ -2,4 +2,4 @@
 
 Code used in the various components is often just experimentation.
 
-TypeScript wall coming soon.
+Mobile tooltip styles still need some love.
