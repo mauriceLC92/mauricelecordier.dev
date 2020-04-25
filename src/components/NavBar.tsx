@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-export const NavBar: React.SFC = () => {
+export const NavBar: React.FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false)
   return <nav className="bg-gray-900">
     <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export const NavBar: React.SFC = () => {
 interface NavbarItem {
   children: React.ReactNode;
 }
-const NavBarHomeButton: React.SFC<NavbarItem> = ({ children }) => {
+const NavBarHomeButton: React.FunctionComponent<NavbarItem> = ({ children }) => {
   return <>
     <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
       {children}
@@ -74,14 +74,15 @@ const NavBarHomeButton: React.SFC<NavbarItem> = ({ children }) => {
   </>
 }
 
-const NavBarItemButton: React.SFC<NavbarItem> = ({ children }) => {
+const NavBarItemButton: React.FunctionComponent<NavbarItem> = ({ children }) => {
   return <>
     <Link to={`${children?.toString().toLocaleLowerCase()}`} className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
       {children}
     </Link>
   </>
 }
-const NavBarItemButtonMobile: React.SFC<NavbarItem> = ({ children }) => {
+
+const NavBarItemButtonMobile: React.FunctionComponent<NavbarItem> = ({ children }) => {
   return <>
     <Link to={`${children?.toString().toLocaleLowerCase()}`} className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
       {children}

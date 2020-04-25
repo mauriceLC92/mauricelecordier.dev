@@ -4,7 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { NavBar } from './NavBar'
 import { Link } from 'react-router-dom'
 
-export const Home: React.SFC = () => {
+export const Home: React.FunctionComponent = () => {
   return <div>
     <NavBar />
     <div className='flex flex-col items-center justify-center' style={{ minHeight: '800px' }}>

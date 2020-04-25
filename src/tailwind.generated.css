@@ -213,6 +213,10 @@ button:-moz-focusring,
  * Add the correct display in IE 10+.
  */
 
+template {
+  display: none;
+}
+
 /**
  * Add the correct display in IE 10.
  */
@@ -392,8 +396,20 @@ svg {
   cursor: pointer;
 }
 
+.bg-gray-700 {
+  background-color: #4a5568;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748;
+}
+
 .bg-gray-900 {
   background-color: #1a202c;
+}
+
+.bg-orange-800 {
+  background-color: #9c4221;
 }
 
 .hover\:bg-gray-700:hover {
@@ -426,6 +442,10 @@ svg {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -476,6 +496,10 @@ svg {
   line-height: 1.25rem;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -489,12 +513,24 @@ svg {
   margin-bottom: 0.25rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
 
 .ml-4 {
   margin-left: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .max-w-6xl {
@@ -573,6 +609,10 @@ svg {
   color: #f7fafc;
 }
 
+.text-gray-200 {
+  color: #edf2f7;
+}
+
 .text-gray-300 {
   color: #e2e8f0;
 }
@@ -607,6 +647,10 @@ svg {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .transition {
